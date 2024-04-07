@@ -26,6 +26,7 @@ pip3 install -r "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/requirements.txt"
 
 echo "Dependencies installed successfully."
 
+cd "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/"
 python3 manage.py migrate
 python3 manage.py collectstatic
 echo "completed now"
