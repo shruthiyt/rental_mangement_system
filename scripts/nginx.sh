@@ -3,7 +3,7 @@
 PROJECT_MAIN_DIR_NAME="rental_mangement_system"
 
 # Replace {FOLDER_NAME_WHERE_SETTINGS_FILE_EXISTS} with the folder name where your nginx configuration file exists
-FOLDER_NAME_WHERE_SETTINGS_FILE_EXISTS="calorieCalc"
+FOLDER_NAME_WHERE_SETTINGS_FILE_EXISTS="Guest"
 
 # Reload systemd daemon
 sudo systemctl daemon-reload
