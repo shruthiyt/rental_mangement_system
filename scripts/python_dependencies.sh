@@ -25,3 +25,7 @@ echo "Installing Python dependencies..."
 pip3 install -r "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/requirements.txt"
 
 echo "Dependencies installed successfully."
+
+python3 manage.py migrate
+python3 manage.py collectstatic
+echo "completed now"
