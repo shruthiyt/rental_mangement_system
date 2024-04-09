@@ -17,7 +17,7 @@ from django.urls import include, path, re_path
 from django.contrib import admin
 from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.conf.urls import url
+from django.urls import re_path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.views import LogoutView
@@ -31,23 +31,23 @@ admin.site.enable_nav_sidebar = False
 
 admin.autodiscover()
 urlpatterns = [
-    url(r'^$', RedirectView.as_view(url='/index/')),
-    url(r'^index/',views.index),
-    url(r'^home/',views.home),
-	url(r'^contact/', views.contact),
-    url(r'^about/',views.about),
-	url(r'^admin/',admin.site.urls),
-    url(r'^User/',include('User.urls')),
-    url(r'^register', views.register),
-    url(r'^login', views.login_view),
-    url(r'^profile/',views.profile),
-    url(r'^post/$', views.post),
-    url(r'^posth/$', views.posth),
-    url(r'^logout', LogoutView.as_view()),
-    url(r'^descr/',views.descr),
-    url(r'^deleter', views.deleter),
-    url(r'^deleteh', views.deleteh),
-    url(r'^search/', views.search)
+    re_path(r'^$', RedirectView.as_view(url='/index/')),
+    re_path(r'^index/',views.index),
+    re_path(r'^home/',views.home),
+	re_path(r'^contact/', views.contact),
+    re_path(r'^about/',views.about),
+	re_path(r'^admin/',admin.site.urls),
+    re_path(r'^User/',include('User.urls')),
+    re_path(r'^register', views.register),
+    re_path(r'^login', views.login_view),
+    re_path(r'^profile/',views.profile),
+    re_path(r'^post/$', views.post),
+    re_path(r'^posth/$', views.posth),
+    re_path(r'^logout', LogoutView.as_view()),
+    re_path(r'^descr/',views.descr),
+    re_path(r'^deleter', views.deleter),
+    re_path(r'^deleteh', views.deleteh),
+    re_path(r'^search/', views.search)
 ]
 
 urlpatterns+= staticfiles_urlpatterns()
